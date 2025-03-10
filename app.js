@@ -53,15 +53,26 @@ app.get('/about', (req, res) => {
 app.post('/api/login', (req, res) => {
     const { email, password } = req.body;
     const users = require('./data/users.json').users;
-    
-    const user = users.find(u => u.email === email && u.password === password);
-    
-    if (user) {
-        req.session.user = user;
-        res.json({ success: true });
-    } else {
-        res.status(401).json({ success: false });
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        return res.status(400).json({ success: false, message: 'Invalid email format' });
     }
+
+    // Check if user exists
+    const user = users.find(u => u.email === email);
+    if (!user) {
+        return res.status(401).json({ success: false, message: 'User not found' });
+    }
+
+    // Check password
+    if (user.password !== password) {
+        return res.status(401).json({ success: false, message: 'Incorrect password' });
+    }
+
+    req.session.user = user;
+    res.json({ success: true });
 });
 
 app.post('/api/signup', (req, res) => {
@@ -70,10 +81,23 @@ app.post('/api/signup', (req, res) => {
     const usersFile = './data/users.json';
     const users = require(usersFile);
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        return res.status(400).json({ success: false, message: 'Invalid email format' });
+    }
+
+    // Validate password length
+    if (password.length < 8) {
+        return res.status(400).json({ success: false, message: 'Password must be at least 8 characters long' });
+    }
+
+    // Check for existing email
     if (users.users.find(u => u.email === email)) {
         return res.status(400).json({ success: false, message: 'Email already exists' });
     }
 
+    // Save new user
     users.users.push({ username, email, password });
     fs.writeFileSync(usersFile, JSON.stringify(users, null, 2));
     
