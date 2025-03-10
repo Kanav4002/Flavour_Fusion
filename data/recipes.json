@@ -1,203 +1,6 @@
 {
   "recipes": [
     {
-      "id": "1741453662689",
-      "title": "Chicken Masala",
-      "description": "Chicken Tikka Masala is a beloved Indian-inspired dish known for its rich, creamy, and flavorful tomato-based curry. It features grilled or pan-seared marinated chicken pieces (tikka) simmered in a spiced, slightly tangy, and aromatic sauce. This dish perfectly balances smoky, spicy, and creamy elements and is often served with naan or basmati rice.",
-      "ingredients": [
-        "Ingredients:",
-        "500g boneless chicken (thighs or breast), cut into chunks",
-        "1/2 cup plain yogurt",
-        "1 tbsp lemon juice",
-        "1 tsp ginger paste",
-        "1 tsp garlic paste",
-        "1 tsp garam masala",
-        "1 tsp cumin powder",
-        "1 tsp coriander powder",
-        "1/2 tsp turmeric powder",
-        "1/2 tsp red chili powder (adjust to spice preference)",
-        "Salt to taste",
-        "1 tbsp oil",
-        "For the Masala Sauce:",
-        "2 tbsp butter or oil",
-        "1 large onion, finely chopped",
-        "2 tomatoes, pureed (or 1/2 cup canned tomato puree)",
-        "1 tsp ginger paste",
-        "1 tsp garlic paste",
-        "1 tsp cumin powder",
-        "1 tsp coriander powder",
-        "1 tsp paprika or Kashmiri red chili powder (for color)",
-        "1/2 tsp turmeric powder",
-        "1 tsp garam masala",
-        "1/2 cup heavy cream or fresh cream",
-        "1 tbsp kasuri methi (dried fenugreek leaves)",
-        "Fresh coriander leaves, chopped (for garnish)",
-        "Salt to taste",
-        "Optional:",
-        "Green chilies for extra spice",
-        "A pinch of sugar to balance acidity"
-      ],
-      "instructions": [
-        "Instructions:",
-        "Marinate the chicken by mixing yogurt, lemon juice, ginger paste, garlic paste, garam masala, cumin powder, coriander powder, turmeric powder, red chili powder, salt, and oil in a bowl.",
-        "Add the chicken chunks to the marinade, coat well, cover, and refrigerate for at least 1 hour.",
-        "Heat 1 tbsp oil in a pan and cook the marinated chicken on medium heat until browned and cooked through, then set it aside.",
-        "In the same pan, heat butter or oil and sauté the chopped onion until golden brown.",
-        "Add ginger paste and garlic paste, cooking for about 1 minute until fragrant.",
-        "Stir in the pureed tomatoes and cook for 5-7 minutes until the oil separates from the sauce.",
-        "Add cumin powder, coriander powder, paprika, turmeric powder, garam masala, and salt, and cook for another 2 minutes.",
-        "Add the cooked chicken and any juices to the sauce, stirring well to coat the chicken.",
-        "Pour in the cream and sprinkle kasuri methi, then simmer for 5 minutes until the sauce thickens.",
-        "Taste and adjust salt or spice if needed, adding a pinch of sugar if the sauce is too acidic.",
-        "Garnish with fresh coriander leaves and serve hot with naan or basmati rice."
-      ],
-      "prepTime": "110",
-      "dietaryType": "veg",
-      "image": "/uploads/1741453662686-502936963-chicken-tikka-masala.jpeg",
-      "author": "Ankit2106",
-      "authorId": "ankit@gmail.com",
-      "createdAt": "2025-03-08T17:07:42.689Z",
-      "ratings": [
-        {
-          "userId": "ankit@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-08T17:08:15.337Z"
-        },
-        {
-          "userId": "ankit@gmail.com",
-          "rating": 3,
-          "createdAt": "2025-03-08T17:08:16.492Z"
-        },
-        {
-          "userId": "ankit@gmail.com",
-          "rating": 2,
-          "createdAt": "2025-03-08T17:08:16.908Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:55:37.558Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 3,
-          "createdAt": "2025-03-09T07:55:39.642Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:55:40.243Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:55:40.558Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:55:40.791Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:55:41.139Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 3,
-          "createdAt": "2025-03-09T07:55:42.093Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 4,
-          "createdAt": "2025-03-09T07:55:42.408Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 1,
-          "createdAt": "2025-03-09T07:55:43.738Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 4,
-          "createdAt": "2025-03-09T07:55:44.538Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 3,
-          "createdAt": "2025-03-09T07:55:44.805Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:55:45.390Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:56:14.842Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 3,
-          "createdAt": "2025-03-09T07:56:15.576Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 4,
-          "createdAt": "2025-03-09T07:56:16.026Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:56:16.392Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 4,
-          "createdAt": "2025-03-09T07:56:16.789Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 3,
-          "createdAt": "2025-03-09T07:56:17.108Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:56:17.458Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 4,
-          "createdAt": "2025-03-09T07:56:18.041Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 4,
-          "createdAt": "2025-03-09T07:56:18.291Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:56:18.591Z"
-        },
-        {
-          "userId": "kannan@gmail.com",
-          "rating": 5,
-          "createdAt": "2025-03-09T07:56:18.759Z"
-        }
-      ],
-      "comments": [
-        {
-          "author": "Ankit2106",
-          "text": "Nice is a good recipe.",
-          "createdAt": "2025-03-08T17:08:50.877Z"
-        }
-      ]
-    },
-    {
       "id": "1741544032388",
       "title": "Panner Butter Masala",
       "description": "A rich and creamy North Indian dish, Paneer Butter Masala is a perfect blend of soft paneer cubes cooked in a velvety tomato-based gravy. The sauce is flavored with aromatic spices, kasuri methi, and a hint of sweetness, finished off with fresh cream and butter for a luxurious texture. It’s a crowd favorite and pairs beautifully with naan, roti, or fragrant basmati rice.",
@@ -236,7 +39,23 @@
       "author": "Kyren5753",
       "authorId": "kyren@gmail.com",
       "createdAt": "2025-03-09T18:13:52.388Z",
-      "ratings": [],
+      "ratings": [
+        {
+          "userId": "kannan@gmail.com",
+          "rating": 4,
+          "createdAt": "2025-03-10T02:29:51.255Z"
+        },
+        {
+          "userId": "kannan@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-03-10T02:29:54.070Z"
+        },
+        {
+          "userId": "kannan@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-03-10T02:29:54.868Z"
+        }
+      ],
       "comments": []
     },
     {
@@ -433,6 +252,65 @@
           "createdAt": "2025-03-09T18:37:56.797Z"
         }
       ],
+      "comments": []
+    },
+    {
+      "id": "1741577566185",
+      "title": "Harman's recipe",
+      "description": "Maggie ubalo, maggie pakake khao",
+      "ingredients": [
+        "maggie"
+      ],
+      "instructions": [
+        "---"
+      ],
+      "prepTime": "2",
+      "dietaryType": "veg",
+      "image": "/uploads/1741577566163-781946333-maggie.png",
+      "author": "muskan2158",
+      "authorId": "muskan@gmail.com",
+      "createdAt": "2025-03-10T03:32:46.185Z",
+      "ratings": [
+        {
+          "userId": "muskan@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-03-10T03:33:18.123Z"
+        }
+      ],
+      "comments": []
+    },
+    {
+      "id": "1741579409749",
+      "title": "Garlic Red Chicken Gravy",
+      "description": "Garlic Red Chicken Gravy Recipe is a lip smacking chicken curry that can literally be put together in under 30 minutes. A quick fix for those days when you want to something delectable yet simple.",
+      "ingredients": [
+        "1 kg Chicken , cleaned",
+        "2 tablespoons Oil",
+        "1 tablespoon Butter (Salted)",
+        "1 Onion , sliced",
+        "15 Dry Red Chillies",
+        "10 cloves Garlic",
+        "1 cup Curd (Dahi / Yogurt)",
+        "1 tablespoon Turmeric powder (Haldi)",
+        "Salt , as required",
+        "1 tablespoon Cumin powder (Jeera) , (optional)"
+      ],
+      "instructions": [
+        "To begin making the Garlic Red Chicken Gravy recipe, soak red chillies and garlic for 10 minutes in hot water.",
+        "Take a mixie jar. Grind the soaked red chillies and garlic into a fine paste. Keep it aside.",
+        "To begin the garlic red chicken gravy, heat oil in a pressure cooker. Add finely chopped onions, stir it till it turns golden brown.",
+        "Now add chicken, salt and turmeric powder in it. Add the paste and stir well.",
+        "Add curd and mix it properly. Now add cumin powder and stir. ",
+        "Next, close the pressure cooker lid and wait for one whistle. The Hot spicy delicious Garlic red chicken gravy is ready to serve now. ",
+        "Serve Garlic Red Chicken Gravy along with Steamed Rice or a Garlic Naan for a weekday meal."
+      ],
+      "prepTime": "20",
+      "dietaryType": "non-veg",
+      "image": "/uploads/1741579409738-810567470-Garlic Red Chicken.png",
+      "author": "muskan2158",
+      "authorId": "muskan@gmail.com",
+      "createdAt": "2025-03-10T04:03:29.749Z",
+      "ratings": [],
       "comments": []
     }
   ]
