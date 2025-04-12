@@ -1,8 +1,16 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
-const app = express();
+const morgan = require('morgan');
+const fs = require('fs');
+const { blockingRead, nonBlockingRead } = require('./utils/fileOperations');
 const multer = require("multer");
+const app = express();
+
+// Set up EJS as the view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "public/uploads/");
@@ -13,6 +21,7 @@ const storage = multer.diskStorage({
     },
 });
 const upload = multer({ storage: storage });
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -634,4 +643,17 @@ app.post('/api/recipes', requireLogin, upload.single('image'), (req, res) => {
         console.error('Error adding recipe:', error);
         res.status(500).json({ success: false, message: 'Failed to add recipe' });
     }
+});
+
+// 404 Error Handler - Catch all undefined routes
+app.use((req, res) => {
+    res.status(404).render("404", { url: req.originalUrl });
+});
+
+// Global Error Handler
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res
+        .status(500)
+        .render("error", { message: "Something went wrong on our end. Please try again later." });
 });
