@@ -1,6 +1,9 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
+const morgan = require('morgan');
+const fs = require('fs');
+const { blockingRead, nonBlockingRead } = require('./utils/fileOperations');
 const app = express();
 const multer = require('multer');
 const storage = multer.diskStorage({
@@ -13,13 +16,23 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({ storage: storage });
-app.use(express.static(path.join(__dirname, 'public')));
 
+// 1. Morgan middleware for HTTP request logging
+app.use(morgan('dev'));
 
-// Middleware
+// 2. Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+
+// 3. Custom logger middleware
+app.use((req, res, next) => {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${req.method} ${req.url}`);
+    next();
+});
+
+// Static file serving
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
     secret: 'flavorfusion-secret',
     resave: false,
@@ -30,7 +43,26 @@ app.use(session({
 app.use('/css', express.static(path.join(__dirname, 'public/css')));
 app.use('/js', express.static(path.join(__dirname, 'public/js')));
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
-app.use('/uploads', express.static(path.join(__dirname, 'public/uploads'))); // Add this line
+app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
+
+// Test routes for blocking vs non-blocking operations
+app.get('/test-blocking', (req, res) => {
+    try {
+        const data = blockingRead(path.join(__dirname, 'data', 'recipes.json'));
+        res.json({ message: 'Blocking read successful', data: JSON.parse(data) });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+app.get('/test-non-blocking', async (req, res) => {
+    try {
+        const data = await nonBlockingRead(path.join(__dirname, 'data', 'recipes.json'));
+        res.json({ message: 'Non-blocking read successful', data: JSON.parse(data) });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 // Basic route
 app.get('/', (req, res) => {
@@ -124,36 +156,36 @@ app.get('/add-recipe', requireLogin, (req, res) => {
 
 // Recipe API endpoints
 app.post('/api/recipes', requireLogin, upload.single('image'), (req, res) => {
-    const fs = require('fs');
-    const recipesFile = './data/recipes.json';
-    let recipes;
-    
     try {
-        recipes = require(recipesFile);
-    } catch (error) {
-        recipes = { recipes: [] };
-    }
-    
-    const newRecipe = {
-        id: Date.now().toString(),
-        title: req.body.title,
-        description: req.body.description,
-        ingredients: JSON.parse(req.body.ingredients),
-        instructions: JSON.parse(req.body.instructions),
-        prepTime: req.body.prepTime,
-        dietaryType: req.body.dietaryType,
-        image: req.file ? `/uploads/${req.file.filename}` : '/images/default-recipe.jpg',
-        author: req.session.user.username,
-        authorId: req.session.user.email,
-        createdAt: new Date().toISOString(),
-        ratings: [],
-        comments: []
-    };
+        const recipesPath = path.join(__dirname, 'data', 'recipes.json');
+        let recipes = { recipes: [] };
 
-    recipes.recipes.push(newRecipe);
-    fs.writeFileSync(recipesFile, JSON.stringify(recipes, null, 2));
-    
-    res.json({ success: true, recipe: newRecipe });
+        if (fs.existsSync(recipesPath)) {
+            const fileContent = fs.readFileSync(recipesPath, 'utf8');
+            recipes = JSON.parse(fileContent);
+        }
+
+        const newRecipe = {
+            id: Date.now().toString(),
+            ...req.body,
+            ingredients: JSON.parse(req.body.ingredients),
+            instructions: JSON.parse(req.body.instructions),
+            image: req.file ? `/uploads/${req.file.filename}` : '/images/default-recipe.jpg',
+            author: req.session.user.username,
+            authorId: req.session.user.email,
+            createdAt: new Date().toISOString(),
+            ratings: [],
+            comments: []
+        };
+
+        recipes.recipes.push(newRecipe);
+        fs.writeFileSync(recipesPath, JSON.stringify(recipes, null, 2));
+
+        res.json({ success: true, recipe: newRecipe });
+    } catch (error) {
+        console.error('Error adding recipe:', error);
+        res.status(500).json({ success: false, message: 'Failed to add recipe' });
+    }
 });
 
 // Recipe routes
@@ -476,7 +508,7 @@ function calculateAverageRating(recipes) {
 }
 
 // Start server
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
@@ -603,36 +635,3 @@ function updateRecipeRating(recipeId) {
         fs.writeFileSync('./data/recipes.json', JSON.stringify(recipes, null, 2));
     }
 }
-// Add recipe route
-app.post('/api/recipes', requireLogin, upload.single('image'), (req, res) => {
-    try {
-        const recipesPath = path.join(__dirname, 'data', 'recipes.json');
-        let recipes = { recipes: [] };
-
-        if (fs.existsSync(recipesPath)) {
-            const fileContent = fs.readFileSync(recipesPath, 'utf8');
-            recipes = JSON.parse(fileContent);
-        }
-
-        const newRecipe = {
-            id: Date.now().toString(),
-            ...req.body,
-            ingredients: JSON.parse(req.body.ingredients),
-            instructions: JSON.parse(req.body.instructions),
-            image: req.file ? `/uploads/${req.file.filename}` : '/images/default-recipe.jpg',
-            author: req.session.user.username,
-            authorId: req.session.user.email,
-            createdAt: new Date().toISOString(),
-            ratings: [],
-            comments: []
-        };
-
-        recipes.recipes.push(newRecipe);
-        fs.writeFileSync(recipesPath, JSON.stringify(recipes, null, 2));
-
-        res.json({ success: true, recipe: newRecipe });
-    } catch (error) {
-        console.error('Error adding recipe:', error);
-        res.status(500).json({ success: false, message: 'Failed to add recipe' });
-    }
-});

@@ -125,7 +125,38 @@
       "author": "Kyren5753",
       "authorId": "kyren@gmail.com",
       "createdAt": "2025-03-09T18:19:41.251Z",
-      "ratings": [],
+      "ratings": [
+        {
+          "userId": "john@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-04-12T14:58:56.834Z"
+        },
+        {
+          "userId": "john@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-04-12T14:58:56.978Z"
+        },
+        {
+          "userId": "john@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-04-12T14:58:57.129Z"
+        },
+        {
+          "userId": "john@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-04-12T14:58:57.280Z"
+        },
+        {
+          "userId": "john@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-04-12T14:58:57.413Z"
+        },
+        {
+          "userId": "john@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-04-12T14:58:57.549Z"
+        }
+      ],
       "comments": []
     },
     {
@@ -250,6 +281,11 @@
           "userId": "kannan@gmail.com",
           "rating": 5,
           "createdAt": "2025-03-09T18:37:56.797Z"
+        },
+        {
+          "userId": "john@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-04-12T14:56:31.385Z"
         }
       ],
       "comments": []
