@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>404 - Page Not Found | FlavourFusion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe9e9 100%);
+            color: #2d3436;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 3rem;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(231, 76, 60, 0.1);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, #e74c3c, #ff7675);
+        }
+        
+        .error-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .error-image {
+            width: 280px;
+            margin-bottom: 2rem;
+            animation: float 6s ease-in-out infinite;
+            filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+            25% {
+                transform: translateY(-15px) rotate(-5deg);
+            }
+            75% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+        
+        h1 {
+            font-size: 5rem;
+            color: #e74c3c;
+            margin: 0;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #ff7675;
+            line-height: 1;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: #2d3436;
+            margin: 1rem 0 2rem;
+            font-weight: 600;
+        }
+        
+        .message {
+            font-size: 1.1rem;
+            color: #636e72;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .url {
+            background: #fff8f8;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 15px;
+            color: #e74c3c;
+            font-family: monospace;
+            font-size: 1.1rem;
+            word-break: break-all;
+            border: 2px dashed #ffcdd2;
+            display: inline-block;
+            max-width: 100%;
+        }
+        
+        .home-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, #e74c3c, #ff7675);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.2);
+        }
+        
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+            background: linear-gradient(45deg, #ff7675, #e74c3c);
+        }
+        
+        .emoji {
+            font-size: 1.5rem;
+            margin: 0 0.3rem;
+            animation: wave 2.5s infinite;
+            display: inline-block;
+            transform-origin: 70% 70%;
+        }
+        
+        @keyframes wave {
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg);
+            }
+            40%,
+            80% {
+                transform: rotate(25deg);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                border-radius: 20px;
+            }
+            .error-image {
+                width: 200px;
+            }
+            h1 {
+                font-size: 4rem;
+            }
+            .subtitle {
+                font-size: 1.25rem;
+            }
+            .message {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 1.5rem;
+            }
+            .error-image {
+                width: 160px;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            .home-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        .pattern-box {
+            background: #2d3436;
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            font-family: 'Source Code Pro', monospace;
+            text-align: left;
+            position: relative;
+        }
+        
+        .box-title {
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #e74c3c;
+            padding: 2px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: white;
+        }
+        
+        .path-match {
+            color: #00b894;
+            margin-bottom: 0.5rem;
+        }
+        
+        .analysis {
+            color: #81ecec;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #636e72;
+        }
+        
+        .highlight {
+            background: rgba(231, 76, 60, 0.2);
+            padding: 0 5px;
+            border-radius: 4px;
+            color: #ff7675;
+        }
+        
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background: #ff7675;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .pattern-box {
+                font-size: 0.9rem;
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="error-content">
+            <img src="https://cdn-icons-png.flaticon.com/512/2674/2674505.png" alt="404 Error" class="error-image">
+            <h1>404</h1>
+            <div class="subtitle">Invalid Path <span class="emoji">🔍</span></div>
+            <p class="message">
+                The requested URL doesn't exist in our recipe collection.
+            </p>
+
+            <div class="pattern-box">
+                <span class="box-title">Path Analysis</span>
+                <div class="path-match">
+                    Requested Path: <span class="highlight"><%= url %></span>
+                </div>
+                <div class="analysis">
+                    # System Analysis:<br> - Path validation failed<br> - No matching route found<br> - Suggestion: Verify URL or return to homepage
+                </div>
+            </div>
+
+            <a href="/" class="home-button">Back to Homepage</a>
+        </div>
+    </div>
+</body>
+
+</html>

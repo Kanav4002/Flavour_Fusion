@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #e74c3c;
+        }
+        
+        .url {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>404 - Page Not Found</h1>
+        <p>The page you're looking for doesn't exist.</p>
+        <div class="url">
+            <%= url %>
+        </div>
+        <a href="/">Back to Homepage</a>
+    </div>
+</body>
+
+</html> background: #fff3f3; padding: 1.2rem; margin: 1.5rem 0; border-radius: 10px; color: #e74c3c; font-size: 1.1rem; border-left: 4px solid #e74c3c; text-align: left; animation: fadeIn 0.5s ease-out; } @keyframes fadeIn { from { opacity: 0; transform: translateX(-10px);
+} to { opacity: 1; transform: translateX(0); } } .home-button { display: inline-block; padding: 1rem 2rem; background: #e74c3c; color: white; text-decoration: none; border-radius: 50px; font-weight: 600; transition: all 0.3s ease; margin-top: 1rem; }
+.home-button:hover { background: #c0392b; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3); } .error-image { width: 180px; margin-bottom: 1.5rem; animation: shake 4s ease-in-out infinite; } @keyframes shake { 0%, 100% { transform:
+rotate(0deg); } 25% { transform: rotate(-5deg); } 75% { transform: rotate(5deg); } } @media (max-width: 480px) { .container { padding: 1.5rem; } h1 { font-size: 2rem; } .error-message { font-size: 1rem; padding: 1rem; } .error-image { width: 140px; }
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://cdn-icons-png.flaticon.com/512/6195/6195679.png" alt="Error" class="error-image">
+        <h1>Oops!</h1>
+        <div class="error-message">
+            <%= message %>
+        </div>
+        <a href="/" class="home-button">Return to Homepage</a>
+    </div>
+</body>
+
+</html>
