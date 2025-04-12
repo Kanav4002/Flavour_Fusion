@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#fff3f3" stroke="#e74c3c" stroke-width="2"/>
+  
+  <!-- Exclamation mark -->
+  <path d="M100,40 L100,120" stroke="#e74c3c" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="100" cy="140" r="8" fill="#e74c3c"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#e74c3c" stroke-width="1" stroke-dasharray="5,5"/>
+</svg> 

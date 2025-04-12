@@ -114,6 +114,469 @@
       "userId": "kannan@gmail.com",
       "week": "2025-03-09T19:24:05.010Z",
       "plan": {}
+    },
+    {
+      "userId": "muskan@gmail.com",
+      "week": "2025-04-12T15:09:43.186Z",
+      "plan": {
+        "Sunday": {
+          "Breakfast": {
+            "id": "1741544032388",
+            "title": "Panner Butter Masala",
+            "description": "A rich and creamy North Indian dish, Paneer Butter Masala is a perfect blend of soft paneer cubes cooked in a velvety tomato-based gravy. The sauce is flavored with aromatic spices, kasuri methi, and a hint of sweetness, finished off with fresh cream and butter for a luxurious texture. It’s a crowd favorite and pairs beautifully with naan, roti, or fragrant basmati rice.",
+            "ingredients": [
+              "200g paneer, cubed",
+              "2 tbsp butter",
+              "1 tbsp oil",
+              "1 large onion, finely chopped",
+              "2 tomatoes, pureed",
+              "1 tsp ginger paste",
+              "1 tsp garlic paste",
+              "1 tsp cumin powder",
+              "1 tsp coriander powder",
+              "1/2 tsp turmeric powder",
+              "1 tsp red chili powder (adjust to taste)",
+              "1 tsp garam masala",
+              "1 tbsp kasuri methi (dried fenugreek leaves)",
+              "1/2 cup heavy cream",
+              "Salt to taste",
+              "Fresh coriander leaves for garnish"
+            ],
+            "instructions": [
+              "Heat 1 tbsp oil and 1 tbsp butter in a pan, then sauté the onions until golden brown.",
+              "Add ginger paste and garlic paste, cooking for about 1 minute until fragrant.",
+              "Stir in the tomato puree and cook for 5-7 minutes until the oil separates from the sauce.",
+              "Add cumin powder, coriander powder, turmeric powder, red chili powder, and salt; cook for 2 minutes.",
+              "Sprinkle kasuri methi and garam masala, stirring well.",
+              "Pour in the cream and simmer the sauce for 2-3 minutes until it thickens.",
+              "Gently add the paneer cubes and cook for 5 minutes, letting them soak in the flavors.",
+              "Garnish with fresh coriander leaves and an extra dollop of butter if desired.",
+              "Serve hot with naan, roti, or jeera rice."
+            ],
+            "prepTime": "40",
+            "dietaryType": "veg",
+            "image": "/uploads/1741544032372-735283559-panner-butter-masala.png",
+            "author": "Kyren5753",
+            "authorId": "kyren@gmail.com",
+            "createdAt": "2025-03-09T18:13:52.388Z",
+            "ratings": [
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 4,
+                "createdAt": "2025-03-10T02:29:51.255Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-10T02:29:54.070Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-10T02:29:54.868Z"
+              }
+            ],
+            "comments": []
+          }
+        },
+        "Monday": {
+          "Dinner": {
+            "id": "1741544381251",
+            "title": "Vegetable Biryani",
+            "description": "This version of vegetable biryani was inspired by legendary actress and food writer Madhur Jaffrey. It can be impossible to choose a favorite, as there are so many different ways you can make and serve this dish, spanning across India and Pakistan alone, and the ingredients and technique can also vary per region. Some that are common across most of the recipes include chicken or lamb, eggs, kewra water, which closely resembles rose water, chili paste, tomatoes, lemon, and/or fennel.",
+            "ingredients": [
+              "Rice",
+              "1 cup basmati rice",
+              "1/4 cup whole milk ",
+              "1/8 tsp. saffron threads",
+              "4 green cardamom pods",
+              "4 whole cloves",
+              "1 (3\") cinnamon stick ",
+              "1 bay leaf ",
+              "1 1/2 tsp. kosher salt",
+              "1/2 tsp. cumin seeds",
+              "Vegetables",
+              "1/4 cup ghee or neutral oil, divided ",
+              "1 medium red onion, thinly sliced",
+              "1 1/2 tsp. kosher salt, divided  ",
+              "3 green cardamom pods",
+              "3 whole cloves ",
+              "1 (3\") cinnamon stick ",
+              "1 bay leaf",
+              "1 1/2 tsp. garam masala",
+              "1 tsp. ground turmeric ",
+              "1/2 tsp. cumin seeds ",
+              "1/2 tsp. freshly ground black pepper",
+              "1/8 tsp. cayenne pepper (optional)",
+              "1 medium Yukon gold potato, peeled and cut into 1/2\" pieces ",
+              "1 cup small cauliflower florets",
+              "1 medium carrot, peeled and cut into 1/2\" pieces",
+              "5 cloves garlic, finely chopped  ",
+              "2 tsp. finely chopped peeled ginger ",
+              "1/2 cup whole-milk Greek yogurt",
+              "2 Tbsp. fresh lime juice",
+              "1 Tbsp. chopped fresh mint ",
+              "Assembly",
+              "1/4 cup chopped dried apricots ",
+              "1/4 cup chopped roasted cashews ",
+              "1 Tbsp. chopped fresh mint"
+            ],
+            "instructions": [
+              "Step 1",
+              "Rinse rice, then transfer to a medium bowl. Cover with water and soak 30 minutes.",
+              "Step 2",
+              "Meanwhile, in a medium pot over medium heat, heat milk until warmed through. Remove from heat and stir in saffron. Let steep until ready to use. ",
+              "Step 3",
+              "Drain rice and transfer to a medium pot. Add cardamom, cloves, cinnamon, bay leaf, salt, cumin, and 1 1/2 cups cold water. Bring to boil, then cover and cook over low heat until liquid is evaporated and rice is tender, 10 to 12 minutes.",
+              "Step 4",
+              "Remove pot from heat. Discard cardamom, cloves, cinnamon, and bay leaf. Fluff rice with a fork; set aside until ready to use.",
+              "Vegetables",
+              "Step 1",
+              "In a large heavy pot over medium heat, melt 2 tablespoons ghee. Add onion, season with 1/2 teaspoon salt, and cook, stirring occasionally, until caramelized and browned, 12 to 15 minutes. Transfer onions to a small bowl or plate.",
+              "Step 2",
+              "In same pot over medium-low heat, melt remaining 2 tablespoons ghee. Add cardamom, cloves, cinnamon, bay leaf, garam masala, turmeric, cumin, black pepper, and cayenne, if using. Cook, stirring constantly, until fragrant, about 30 seconds. Add potato and cauliflower and cook, stirring frequently and making sure spices don’t burn, until tender, 8 to 10 minutes. Add carrots, garlic, and ginger and cook, stirring frequently, until tender and fragrant, about 5 minutes. Add yogurt, lime juice, and mint and stir to combine; season with remaining 1 teaspoon salt. Cook, stirring occasionally, until some of the liquid is evaporated, 1 to 2 minutes more. Discard cardamom, cloves, cinnamon, and bay leaf.",
+              "Assembly",
+              "Step 1",
+              "In a large serving dish or platter, layer bottom with half of rice. Top with half of potato mixture and half of caramelized onions. Repeat with remaining rice, potato mixture, and caramelized onions.",
+              "Step 2",
+              "Drizzle with saffron milk. Top with cashews, apricots, and mint."
+            ],
+            "prepTime": "70",
+            "dietaryType": "veg",
+            "image": "/uploads/1741544381235-867623085-veg-birayani.png",
+            "author": "Kyren5753",
+            "authorId": "kyren@gmail.com",
+            "createdAt": "2025-03-09T18:19:41.251Z",
+            "ratings": [],
+            "comments": []
+          }
+        },
+        "Tuesday": {
+          "Lunch": {
+            "id": "1741577566185",
+            "title": "Harman's recipe",
+            "description": "Maggie ubalo, maggie pakake khao",
+            "ingredients": [
+              "maggie"
+            ],
+            "instructions": [
+              "---"
+            ],
+            "prepTime": "2",
+            "dietaryType": "veg",
+            "image": "/uploads/1741577566163-781946333-maggie.png",
+            "author": "muskan2158",
+            "authorId": "muskan@gmail.com",
+            "createdAt": "2025-03-10T03:32:46.185Z",
+            "ratings": [
+              {
+                "userId": "muskan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-10T03:33:18.123Z"
+              }
+            ],
+            "comments": []
+          }
+        },
+        "Thursday": {
+          "Dinner": {
+            "id": "1741579409749",
+            "title": "Garlic Red Chicken Gravy",
+            "description": "Garlic Red Chicken Gravy Recipe is a lip smacking chicken curry that can literally be put together in under 30 minutes. A quick fix for those days when you want to something delectable yet simple.",
+            "ingredients": [
+              "1 kg Chicken , cleaned",
+              "2 tablespoons Oil",
+              "1 tablespoon Butter (Salted)",
+              "1 Onion , sliced",
+              "15 Dry Red Chillies",
+              "10 cloves Garlic",
+              "1 cup Curd (Dahi / Yogurt)",
+              "1 tablespoon Turmeric powder (Haldi)",
+              "Salt , as required",
+              "1 tablespoon Cumin powder (Jeera) , (optional)"
+            ],
+            "instructions": [
+              "To begin making the Garlic Red Chicken Gravy recipe, soak red chillies and garlic for 10 minutes in hot water.",
+              "Take a mixie jar. Grind the soaked red chillies and garlic into a fine paste. Keep it aside.",
+              "To begin the garlic red chicken gravy, heat oil in a pressure cooker. Add finely chopped onions, stir it till it turns golden brown.",
+              "Now add chicken, salt and turmeric powder in it. Add the paste and stir well.",
+              "Add curd and mix it properly. Now add cumin powder and stir. ",
+              "Next, close the pressure cooker lid and wait for one whistle. The Hot spicy delicious Garlic red chicken gravy is ready to serve now. ",
+              "Serve Garlic Red Chicken Gravy along with Steamed Rice or a Garlic Naan for a weekday meal."
+            ],
+            "prepTime": "20",
+            "dietaryType": "non-veg",
+            "image": "/uploads/1741579409738-810567470-Garlic Red Chicken.png",
+            "author": "muskan2158",
+            "authorId": "muskan@gmail.com",
+            "createdAt": "2025-03-10T04:03:29.749Z",
+            "ratings": [],
+            "comments": []
+          }
+        },
+        "Friday": {
+          "Breakfast": {
+            "id": "1741544645056",
+            "title": "Papdi Chaat",
+            "description": "Feeling snacky? Look no further. Papdi chaat—also known as papri chat—is here to really spice up your snacking lifestyle. A traditional street food from the Indian subcontinent, popular across India, Pakistan, Bangladesh, Nepal, and now my kitchen, it is a kaleidoscope of flavor, textures, and pleasure.\r\nPapdi is a crispy flour-based wafer-like cracker that's been mildly spiced, mixed with oil or ghee, then deep-fried. Chaat—derived from Indo-Aryan words that literally mean \"tasting with fingertips\" and \"to devour with relish\"—simply means \"snack.\" Papdi chaat can take on many variations, lending itself open to different toppings, condiments, and flavorings. This particular version is a monster of a delight with two chutneys, tender potatoes and chickpeas, tangy yogurt, a medley of eye-catching red onions, pomegranate seeds, diced tomatoes, and finished with a generous snowing of crunchy sev noodles.",
+            "ingredients": [
+              "For the papdi",
+              "1/4 cup ghee or butter",
+              "1/2 tsp. ajwain seeds",
+              "1/2 tsp. nigella seeds",
+              "1/2 tsp. cumin seeds",
+              "1 1/2 tsp. white sesame seeds",
+              "1 1/2 tsp. black sesame seeds",
+              "1/2 cup whole-wheat flour",
+              "1 1/2 cups all-purpose flour",
+              "3/4 tsp. black salt",
+              "6 to 8 tbsp. water",
+              "Vegetable oil, for frying",
+              "For the green chutney",
+              "1 1/2 cups freshly chopped cilantro, tender stems and leaves",
+              "1 1/2 cups mint leaves",
+              "1 large clove garlic, diced",
+              "1/4 diced yellow onion",
+              "2 green serrano peppers, sliced",
+              "1 tsp. freshly minced ginger",
+              "1 1/2 tsp. ground cumin",
+              "1 tsp. black salt",
+              "1 Tbsp. packed brown sugar",
+              "Juice of 1/2 lime",
+              "1/2 cup water",
+              "For the tamarind-date chutney",
+              "3/4 cup tamarind concentrate",
+              "3/4 cup chopped dried dates (about 15 dates)",
+              "1/2 cup packed brown sugar",
+              "1/2 tsp. ground cumin",
+              "1 tsp. ground coriander",
+              "3/4 tsp. red chili powder (optional)",
+              "1 tsp. freshly minced ginger",
+              "Juice of 1/2 lemon",
+              "1 cup water",
+              "1 tsp. black salt",
+              "For the potatoes",
+              "1 lb. baby potatoes, quartered",
+              "1 tsp. kosher salt",
+              "For serving",
+              "Cooked chickpeas",
+              "Yogurt",
+              "Diced red onion",
+              "Sliced red chilis (optional)",
+              "Diced tomatoes",
+              "Sev",
+              "Cilantro leaves",
+              "Pomegranate seeds",
+              "Chaat masala"
+            ],
+            "instructions": [
+              "Step 1",
+              "In a medium pan over medium-low heat, melt ghee. Add in seeds and toast, swirling pan occasionally until white sesame seeds are lightly golden, about 1 minute. Remove from heat and let cool.",
+              "Step 2",
+              "In a large bowl, mix together flours and salt. Stir in cooled ghee mixture and use your fingers to work the ghee evenly into the flour mixture.Stir in water and knead into a cohesive ball of dough. Cover and let rest for 30 minutes to 1 hour.",
+              "Step 3",
+              "Halve dough, then roll each piece to about ⅛” in thickness. Prick dough all over with a fork, then cut out rounds using a 2” cookie cutter. Transfer to a baking sheet or large plate lined with parchment. Repeat with remaining dough. Reroll all scraps together into another sheet to punch out more rounds (or fry as is for snacking!).",
+              "Step 4",
+              "Meanwhile, in a large pot on medium heat, heat 1” of vegetable oil to between 350° and 375°. ",
+              "Step 5",
+              "Being sure not to overcrowd the pan, fry papdi in batches, stirring occasionally, until evenly golden, about 3 minutes. Reduce heat to low if papdis are turning dark gold too soon. Transfer to a paper towel-lined plate and repeat with remaining papdi.",
+              "For the green chutney",
+              "Step 1",
+              "Add all ingredients to a blender and blend until smooth. ",
+              "Step 2",
+              "Transfer to an airtight container and store in the refrigerator until ready for use.",
+              "For the tamarind-date chutney",
+              "Step 1",
+              "In a medium pot over medium heat, bring all ingredients to a simmer. Reduce heat to low and continue cooking, stirring occasionally, until dates break down and turn into a paste, about 20 minutes. ",
+              "Step 2",
+              "Using a potato masher, mash mixture until mostly smooth. Alternatively, let cool slightly, then transfer to a blender and blend until smooth. ",
+              "Step 3",
+              "Let cool completely, then transfer to an airtight container and store in the refrigerator.",
+              "For the potatoes",
+              "Step 1",
+              "In a large pot over medium heat, add potatoes and salt and cover with water. Bring to a boil, then continue cooking until completely tender, about 9 minutes more. Drain.",
+              "Step 2",
+              "Once cool to the touch, remove potato skins if desired.",
+              "To serve",
+              "Step 1",
+              "On a large plate, place 9 to 12 papdis in a single layer. Top with cooked potatoes, chickpeas, yogurt, tamarind-date chutney, green chutney, red onion, red chilis (if using), tomatoes, sev, cilatro, and pomegranate as desired. Sprinkle over chaat masala to taste before serving."
+            ],
+            "prepTime": "125",
+            "dietaryType": "veg",
+            "image": "/uploads/1741544645042-976386715-papdi.png",
+            "author": "Kannan2112",
+            "authorId": "kannan@gmail.com",
+            "createdAt": "2025-03-09T18:24:05.056Z",
+            "ratings": [
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-09T18:37:54.753Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 3,
+                "createdAt": "2025-03-09T18:37:55.462Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 4,
+                "createdAt": "2025-03-09T18:37:56.096Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-09T18:37:56.429Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-09T18:37:56.647Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-09T18:37:56.797Z"
+              }
+            ],
+            "comments": []
+          }
+        }
+      }
+    },
+    {
+      "userId": "muskan@gmail.com",
+      "week": "2025-04-19T15:09:43.186Z",
+      "plan": {
+        "Friday": {
+          "Breakfast": {
+            "id": "1741544645056",
+            "title": "Papdi Chaat",
+            "description": "Feeling snacky? Look no further. Papdi chaat—also known as papri chat—is here to really spice up your snacking lifestyle. A traditional street food from the Indian subcontinent, popular across India, Pakistan, Bangladesh, Nepal, and now my kitchen, it is a kaleidoscope of flavor, textures, and pleasure.\r\nPapdi is a crispy flour-based wafer-like cracker that's been mildly spiced, mixed with oil or ghee, then deep-fried. Chaat—derived from Indo-Aryan words that literally mean \"tasting with fingertips\" and \"to devour with relish\"—simply means \"snack.\" Papdi chaat can take on many variations, lending itself open to different toppings, condiments, and flavorings. This particular version is a monster of a delight with two chutneys, tender potatoes and chickpeas, tangy yogurt, a medley of eye-catching red onions, pomegranate seeds, diced tomatoes, and finished with a generous snowing of crunchy sev noodles.",
+            "ingredients": [
+              "For the papdi",
+              "1/4 cup ghee or butter",
+              "1/2 tsp. ajwain seeds",
+              "1/2 tsp. nigella seeds",
+              "1/2 tsp. cumin seeds",
+              "1 1/2 tsp. white sesame seeds",
+              "1 1/2 tsp. black sesame seeds",
+              "1/2 cup whole-wheat flour",
+              "1 1/2 cups all-purpose flour",
+              "3/4 tsp. black salt",
+              "6 to 8 tbsp. water",
+              "Vegetable oil, for frying",
+              "For the green chutney",
+              "1 1/2 cups freshly chopped cilantro, tender stems and leaves",
+              "1 1/2 cups mint leaves",
+              "1 large clove garlic, diced",
+              "1/4 diced yellow onion",
+              "2 green serrano peppers, sliced",
+              "1 tsp. freshly minced ginger",
+              "1 1/2 tsp. ground cumin",
+              "1 tsp. black salt",
+              "1 Tbsp. packed brown sugar",
+              "Juice of 1/2 lime",
+              "1/2 cup water",
+              "For the tamarind-date chutney",
+              "3/4 cup tamarind concentrate",
+              "3/4 cup chopped dried dates (about 15 dates)",
+              "1/2 cup packed brown sugar",
+              "1/2 tsp. ground cumin",
+              "1 tsp. ground coriander",
+              "3/4 tsp. red chili powder (optional)",
+              "1 tsp. freshly minced ginger",
+              "Juice of 1/2 lemon",
+              "1 cup water",
+              "1 tsp. black salt",
+              "For the potatoes",
+              "1 lb. baby potatoes, quartered",
+              "1 tsp. kosher salt",
+              "For serving",
+              "Cooked chickpeas",
+              "Yogurt",
+              "Diced red onion",
+              "Sliced red chilis (optional)",
+              "Diced tomatoes",
+              "Sev",
+              "Cilantro leaves",
+              "Pomegranate seeds",
+              "Chaat masala"
+            ],
+            "instructions": [
+              "Step 1",
+              "In a medium pan over medium-low heat, melt ghee. Add in seeds and toast, swirling pan occasionally until white sesame seeds are lightly golden, about 1 minute. Remove from heat and let cool.",
+              "Step 2",
+              "In a large bowl, mix together flours and salt. Stir in cooled ghee mixture and use your fingers to work the ghee evenly into the flour mixture.Stir in water and knead into a cohesive ball of dough. Cover and let rest for 30 minutes to 1 hour.",
+              "Step 3",
+              "Halve dough, then roll each piece to about ⅛” in thickness. Prick dough all over with a fork, then cut out rounds using a 2” cookie cutter. Transfer to a baking sheet or large plate lined with parchment. Repeat with remaining dough. Reroll all scraps together into another sheet to punch out more rounds (or fry as is for snacking!).",
+              "Step 4",
+              "Meanwhile, in a large pot on medium heat, heat 1” of vegetable oil to between 350° and 375°. ",
+              "Step 5",
+              "Being sure not to overcrowd the pan, fry papdi in batches, stirring occasionally, until evenly golden, about 3 minutes. Reduce heat to low if papdis are turning dark gold too soon. Transfer to a paper towel-lined plate and repeat with remaining papdi.",
+              "For the green chutney",
+              "Step 1",
+              "Add all ingredients to a blender and blend until smooth. ",
+              "Step 2",
+              "Transfer to an airtight container and store in the refrigerator until ready for use.",
+              "For the tamarind-date chutney",
+              "Step 1",
+              "In a medium pot over medium heat, bring all ingredients to a simmer. Reduce heat to low and continue cooking, stirring occasionally, until dates break down and turn into a paste, about 20 minutes. ",
+              "Step 2",
+              "Using a potato masher, mash mixture until mostly smooth. Alternatively, let cool slightly, then transfer to a blender and blend until smooth. ",
+              "Step 3",
+              "Let cool completely, then transfer to an airtight container and store in the refrigerator.",
+              "For the potatoes",
+              "Step 1",
+              "In a large pot over medium heat, add potatoes and salt and cover with water. Bring to a boil, then continue cooking until completely tender, about 9 minutes more. Drain.",
+              "Step 2",
+              "Once cool to the touch, remove potato skins if desired.",
+              "To serve",
+              "Step 1",
+              "On a large plate, place 9 to 12 papdis in a single layer. Top with cooked potatoes, chickpeas, yogurt, tamarind-date chutney, green chutney, red onion, red chilis (if using), tomatoes, sev, cilatro, and pomegranate as desired. Sprinkle over chaat masala to taste before serving."
+            ],
+            "prepTime": "125",
+            "dietaryType": "veg",
+            "image": "/uploads/1741544645042-976386715-papdi.png",
+            "author": "Kannan2112",
+            "authorId": "kannan@gmail.com",
+            "createdAt": "2025-03-09T18:24:05.056Z",
+            "ratings": [
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-09T18:37:54.753Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 3,
+                "createdAt": "2025-03-09T18:37:55.462Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 4,
+                "createdAt": "2025-03-09T18:37:56.096Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-09T18:37:56.429Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-09T18:37:56.647Z"
+              },
+              {
+                "userId": "kannan@gmail.com",
+                "rating": 5,
+                "createdAt": "2025-03-09T18:37:56.797Z"
+              }
+            ],
+            "comments": []
+          }
+        }
+      }
     }
   ]
 }
