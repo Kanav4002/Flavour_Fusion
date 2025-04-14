@@ -1,0 +1,14 @@
+{
+    "name": "FlavorFusion",
+    "short_name": "FlavorFusion",
+    "icons": [
+        {
+            "src": "/favicon/favicon.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#ff6b6b",
+    "background_color": "#ffffff",
+    "display": "standalone"
+} 
