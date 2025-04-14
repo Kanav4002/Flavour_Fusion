@@ -3,14 +3,15 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4f4f4;
+    background-color: var(--bg-secondary);
+    transition: background-color 0.3s;
 }
 
 .auth-form {
-    background-color: white;
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--shadow-color, rgba(0, 0, 0, 0.1));
     width: 100%;
     max-width: 400px;
 }
@@ -18,7 +19,7 @@
 .auth-form h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .form-group {
@@ -28,34 +29,38 @@
 .form-group input {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 .auth-form button {
     width: 100%;
     padding: 0.8rem;
-    background-color: #333;
+    background-color: var(--accent-color, #333);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
     margin-top: 1rem;
+    transition: background-color 0.3s;
 }
 
 .auth-form button:hover {
-    background-color: #444;
+    background-color: var(--accent-color-dark, #444);
 }
 
 .auth-form p {
     text-align: center;
     margin-top: 1rem;
+    color: var(--text-secondary);
 }
 
 .auth-form a {
-    color: #333;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -91,18 +96,31 @@
     color: var(--accent-color);
 }
 
-/* Update existing styles */
-.auth-container {
-    background-color: var(--bg-secondary);
+/* Dark mode specific styles */
+[data-theme="dark"] .auth-container {
+    background-color: #1a1a1a;
 }
 
-.auth-form {
-    background-color: var(--card-bg);
-    color: var(--text-primary);
+[data-theme="dark"] .auth-form {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.auth-form input {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    border-color: var(--border-color);
+[data-theme="dark"] .auth-form h2 {
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .form-group input {
+    background-color: #333333;
+    color: #f0f0f0;
+    border-color: #404040;
+}
+
+[data-theme="dark"] .auth-form p {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .auth-form a {
+    color: #64b5f6;
 }

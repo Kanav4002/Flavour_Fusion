@@ -602,71 +602,79 @@
                                 </div>
                             </div>
                         </article>
-
-                        <!-- Blog Post 6 -->
-                        <article class="blog-card">
-                            <div class="blog-card-img">
-                                <img src="https://source.unsplash.com/random/600x400?worldfood" alt="Blog post image">
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span>By Food Historian Carlos</span>
-                                    <span>May 15, 2023</span>
-                                </div>
-                                <div class="blog-card-tags">
-                                    <span class="blog-tag">World Cuisine</span>
-                                    <span class="blog-tag">Culture</span>
-                                </div>
-                                <h3>The Global Pantry: Exploring Culinary Traditions Across Continents</h3>
-                                <p>Take a journey through the diverse food cultures of the world, understanding how geography, history, and tradition shape the way we eat and cook...</p>
-                                <div class="blog-card-actions">
-                                    <div>
-                                        <button class="blog-card-btn">Read More</button>
-                                        <button class="blog-card-btn secondary" onclick="openEditModal(6)"><i class="fas fa-edit"></i></button>
-                                    </div>
-                                    <div class="blog-card-stats">
-                                        <span><i class="far fa-heart"></i> 52</span>
-                                        <span><i class="far fa-comment"></i> 20</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
                     </div>
+                </div>
+                
+                <div class="pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">4</button>
+                    <button class="pagination-btn">5</button>
+                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
             
-            <div class="blog-sidebar">
+            <div class="sidebar">
                 <div class="sidebar-section">
                     <h3>Categories</h3>
-                    <ul class="category-list">
-                        <li class="category-item"><a href="#">Cooking Tips <span>24</span></a></li>
-                        <li class="category-item"><a href="#">Recipes <span>42</span></a></li>
-                        <li class="category-item"><a href="#">Ingredients <span>18</span></a></li>
-                        <li class="category-item"><a href="#">Kitchen Equipment <span>15</span></a></li>
-                        <li class="category-item"><a href="#">Nutrition <span>20</span></a></li>
-                    </ul>
+                    <div class="category-list">
+                        <div class="category-item">
+                            <a href="#">Cooking Tips</a>
+                            <span class="category-count">24</span>
+                        </div>
+                        <div class="category-item">
+                            <a href="#">Recipes</a>
+                            <span class="category-count">18</span>
+                        </div>
+                        <div class="category-item">
+                            <a href="#">Ingredients</a>
+                            <span class="category-count">15</span>
+                        </div>
+                        <div class="category-item">
+                            <a href="#">Kitchen Equipment</a>
+                            <span class="category-count">12</span>
+                        </div>
+                        <div class="category-item">
+                            <a href="#">Food Culture</a>
+                            <span class="category-count">9</span>
+                        </div>
+                        <div class="category-item">
+                            <a href="#">Nutrition</a>
+                            <span class="category-count">8</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="sidebar-section">
                     <h3>Recent Posts</h3>
-                    <div class="recent-posts">
+                    <div class="recent-posts-list">
                         <div class="recent-post-item">
                             <a href="#">10 Essential Knife Skills Every Home Cook Should Master</a>
-                            <span class="recent-post-date">June 15</span>
+                            <span class="recent-post-date">June 15, 2023</span>
                         </div>
                         <div class="recent-post-item">
                             <a href="#">The Art of Spice Blending: Create Your Own Signature Mixes</a>
-                            <span class="recent-post-date">June 10</span>
+                            <span class="recent-post-date">June 10, 2023</span>
                         </div>
                         <div class="recent-post-item">
                             <a href="#">The Science Behind Perfect Pastries</a>
-                            <span class="recent-post-date">June 5</span>
+                            <span class="recent-post-date">June 5, 2023</span>
                         </div>
                         <div class="recent-post-item">
                             <a href="#">Seasonal Eating: Maximizing Flavor and Nutrition</a>
-                            <span class="recent-post-date">May 28</span>
+                            <span class="recent-post-date">May 28, 2023</span>
                         </div>
                     </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter to get the latest recipes and cooking tips.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -677,44 +685,42 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Create New Blog Post</h2>
-                <span class="modal-close" onclick="closeNewPostModal()">&times;</span>
+                <span class="modal-close" onclick="closeModal('newPostModal')">&times;</span>
             </div>
-            <div class="modal-body">
-                <form id="newPostForm">
-                    <div class="modal-form-group">
-                        <label for="postTitle">Title</label>
-                        <input type="text" id="postTitle" required>
-                    </div>
-                    <div class="modal-form-group">
-                        <label for="postCategory">Category</label>
-                        <select id="postCategory">
-                            <option value="cooking-tips">Cooking Tips</option>
-                            <option value="recipes">Recipes</option>
-                            <option value="ingredients">Ingredients</option>
-                            <option value="kitchen-equipment">Kitchen Equipment</option>
-                            <option value="nutrition">Nutrition</option>
-                        </select>
-                    </div>
-                    <div class="modal-form-group">
-                        <label for="postTags">Tags (comma separated)</label>
-                        <input type="text" id="postTags">
-                    </div>
-                    <div class="modal-form-group">
-                        <label for="postImage">Image</label>
-                        <input type="file" id="postImage" accept="image/*">
-                        <small>Select an image for your blog post. If none is selected, a default image will be used.</small>
-                        <div id="imagePreview" style="display: none; margin-top: 10px;"></div>
-                    </div>
-                    <div class="modal-form-group">
-                        <label for="postContent">Content</label>
-                        <textarea id="postContent" rows="10" required></textarea>
-                    </div>
-                    <div class="modal-form-buttons">
-                        <button type="button" class="modal-btn modal-btn-secondary" onclick="closeNewPostModal()">Cancel</button>
-                        <button type="submit" class="modal-btn modal-btn-primary">Publish Post</button>
-                    </div>
-                </form>
-            </div>
+            <form id="newPostForm">
+                <div class="modal-form-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" placeholder="Enter post title">
+                </div>
+                <div class="modal-form-group">
+                    <label for="postCategory">Category</label>
+                    <select id="postCategory">
+                        <option value="">Select a category</option>
+                        <option value="cooking-tips">Cooking Tips</option>
+                        <option value="recipes">Recipes</option>
+                        <option value="ingredients">Ingredients</option>
+                        <option value="kitchen-equipment">Kitchen Equipment</option>
+                        <option value="food-culture">Food Culture</option>
+                        <option value="nutrition">Nutrition</option>
+                    </select>
+                </div>
+                <div class="modal-form-group">
+                    <label for="postTags">Tags (comma separated)</label>
+                    <input type="text" id="postTags" placeholder="e.g. baking, desserts, tips">
+                </div>
+                <div class="modal-form-group">
+                    <label for="postImage">Featured Image</label>
+                    <input type="file" id="postImage" accept="image/*">
+                </div>
+                <div class="modal-form-group">
+                    <label for="postContent">Content</label>
+                    <textarea id="postContent" placeholder="Write your blog post content here..."></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-btn modal-btn-secondary" onclick="closeModal('newPostModal')">Cancel</button>
+                    <button type="submit" class="modal-btn modal-btn-primary">Publish</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -723,13 +729,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Edit Blog Post</h2>
-                <span class="modal-close" onclick="closeEditModal()">&times;</span>
+                <span class="modal-close" onclick="closeModal('editPostModal')">&times;</span>
             </div>
             <form id="editPostForm">
                 <input type="hidden" id="editPostId">
                 <div class="modal-form-group">
                     <label for="editPostTitle">Title</label>
-                    <input type="text" id="editPostTitle" placeholder="Enter blog post title">
+                    <input type="text" id="editPostTitle">
                 </div>
                 <div class="modal-form-group">
                     <label for="editPostCategory">Category</label>
@@ -739,84 +745,62 @@
                         <option value="recipes">Recipes</option>
                         <option value="ingredients">Ingredients</option>
                         <option value="kitchen-equipment">Kitchen Equipment</option>
+                        <option value="food-culture">Food Culture</option>
                         <option value="nutrition">Nutrition</option>
-                        <option value="world-cuisine">World Cuisine</option>
                     </select>
                 </div>
                 <div class="modal-form-group">
                     <label for="editPostTags">Tags (comma separated)</label>
-                    <input type="text" id="editPostTags" placeholder="e.g. cooking, tips, beginner">
+                    <input type="text" id="editPostTags">
                 </div>
                 <div class="modal-form-group">
                     <label for="editPostImage">Featured Image</label>
-                    <div id="currentImagePreview" style="margin-bottom: 1rem;">
-                        <img id="currentImage" src="" alt="Current featured image" style="max-width: 100%; max-height: 200px; border-radius: 4px;">
-                    </div>
-                    <input type="file" id="editPostImage">
+                    <input type="file" id="editPostImage" accept="image/*">
                 </div>
                 <div class="modal-form-group">
                     <label for="editPostContent">Content</label>
-                    <textarea id="editPostContent" placeholder="Write your blog post content here..."></textarea>
+                    <textarea id="editPostContent"></textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="modal-btn modal-btn-danger" onclick="confirmDeletePost()">Delete Post</button>
-                    <button type="button" class="modal-btn modal-btn-secondary" onclick="closeEditModal()">Cancel</button>
+                    <button type="button" class="modal-btn modal-btn-danger" onclick="confirmDelete()">Delete</button>
+                    <button type="button" class="modal-btn modal-btn-secondary" onclick="closeModal('editPostModal')">Cancel</button>
                     <button type="submit" class="modal-btn modal-btn-primary">Save Changes</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Delete Confirmation Modal -->
-    <div id="deleteConfirmModal" class="modal">
-        <div class="modal-content" style="max-width: 400px;">
-            <div class="modal-header">
-                <h2>Confirm Delete</h2>
-                <span class="modal-close" onclick="closeDeleteConfirmModal()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <p>Are you sure you want to delete this blog post? This action cannot be undone.</p>
-                <div class="modal-form-buttons">
-                    <button type="button" class="modal-btn modal-btn-secondary" onclick="closeDeleteConfirmModal()">Cancel</button>
-                    <button type="button" id="deleteConfirmBtn" class="modal-btn modal-btn-danger">Delete</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- View Post Modal -->
     <div id="viewPostModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content view-post-content">
             <div class="modal-header">
                 <h2 id="viewPostTitle"></h2>
-                <span class="modal-close">&times;</span>
+                <span class="modal-close" onclick="closeModal('viewPostModal')">&times;</span>
             </div>
-            <div class="modal-body">
-                <div class="post-meta">
-                    <span id="viewPostAuthor"></span>
-                    <span id="viewPostDate"></span>
-                </div>
-                <div id="viewPostTags" class="post-tags"></div>
-                <div class="post-image">
-                    <img id="viewPostImage" src="" alt="">
-                </div>
-                <div class="post-content">
-                    <p id="viewPostContent"></p>
-                </div>
+            <div class="post-meta">
+                <span id="viewPostAuthor"></span>
+                <span id="viewPostDate"></span>
+                <div id="viewPostTags" class="blog-card-tags"></div>
+            </div>
+            <div class="post-image">
+                <img id="viewPostImage" src="" alt="">
+            </div>
+            <div class="post-content">
+                <p id="viewPostContent"></p>
+            </div>
+            
+            <div class="post-comments">
+                <h3>Comments</h3>
+                <div id="commentsContainer"></div>
                 
-                <div class="post-comments">
-                    <h3>Comments</h3>
-                    <div id="commentsContainer"></div>
-                    
-                    <div class="comment-form">
-                        <h4>Leave a Comment</h4>
-                        <form id="commentForm">
-                            <div class="modal-form-group">
-                                <textarea id="commentContent" placeholder="Write your comment here..." rows="4"></textarea>
-                            </div>
-                            <button type="submit" class="modal-btn modal-btn-primary">Post Comment</button>
-                        </form>
-                    </div>
+                <div class="comment-form">
+                    <h4>Leave a Comment</h4>
+                    <form id="commentForm">
+                        <div class="modal-form-group">
+                            <textarea id="commentContent" placeholder="Write your comment here..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="modal-btn modal-btn-primary">Post Comment</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -862,4 +846,4 @@
     <script src="/js/theme.js"></script>
     <script src="/js/global.js"></script>
 </body>
-</html>
+</html> 

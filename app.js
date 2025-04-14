@@ -43,20 +43,20 @@ app.use('/uploads', express.static(path.join(__dirname, 'public/uploads'))); // 
 
 // Basic route
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "index.html"));
+    res.render("index");
 });
 
 // Authentication routes
 app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "login.html"));
+    res.render("login");
 });
 
 app.get("/signup", (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "signup.html"));
+    res.render("signup");
 });
 
 app.get("/about", (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "about.html"));
+    res.render("about");
 });
 
 app.post("/api/login", (req, res) => {
@@ -125,7 +125,7 @@ const requireLogin = (req, res, next) => {
 
 // Dashboard route
 app.get("/dashboard", requireLogin, (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "dashboard.html"));
+    res.render("dashboard");
 });
 
 // Add recipe route
@@ -169,7 +169,7 @@ app.post('/api/recipes', requireLogin, upload.single('image'), (req, res) => {
 
 // Recipe routes
 app.get("/recipes", (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "recipes.html"));
+    res.render("recipes");
 });
 
 // Get all recipes
@@ -339,7 +339,7 @@ app.get("/logout", (req, res) => {
 
 // Blog routes
 app.get("/blog", (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "blog.html"));
+    res.render("blog");
 });
 
 app.get("/blog/:id", (req, res) => {
@@ -437,7 +437,7 @@ app.get("/api/recipe-of-day", (req, res) => {
 
 // Profile routes
 app.get("/profile", requireLogin, (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "profile.html"));
+    res.render("profile");
 });
 
 app.get("/api/user/profile", requireLogin, (req, res) => {
@@ -530,7 +530,7 @@ app.put("/api/recipes/:id", requireLogin, (req, res) => {
 
 // Meal planner routes
 app.get("/meal-planner", requireLogin, (req, res) => {
-    res.sendFile(path.join(__dirname, "views", "meal-planner.html"));
+    res.render("meal-planner");
 });
 
 app.get("/api/meal-plan", requireLogin, (req, res) => {
