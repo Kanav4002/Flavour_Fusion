@@ -94,7 +94,7 @@
 
 .recipe-card {
     position: relative;
-    background: var(--bg-secondary);
+    background-color: var(--card-bg, white);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -122,12 +122,13 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    background-color: var(--card-bg, white);
 }
 
 .recipe-card h3 {
     margin: 0 0 8px 0;
     font-size: 1rem;
-    color: var(--text-primary);
+    color: var(--text-primary, #333);
     line-height: 1.3;
 }
 
@@ -136,7 +137,7 @@
     align-items: center;
     margin-bottom: 8px;
     font-size: 0.8rem;
-    color: var(--text-secondary);
+    color: var(--text-secondary, #666);
 }
 
 .recipe-meta i {
@@ -342,28 +343,55 @@
 
 /* Style for recipe cards in profile page */
 .recipe-info,
-.recipe-info p,
-.recipe-info span,
-.recipe-info a,
-.recipe-info a:visited,
-.recipe-info a:link,
-.recipe-info a:active {
-    color: white !important;
-    text-decoration: none !important;
+.recipe-info span {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #666) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
 }
 
-/* Style for the cook time */
+.recipe-info i {
+    color: var(--accent-color, #ff6b6b);
+    margin-right: 0.3rem;
+}
+
 .recipe-info span[class*="mins"],
-.recipe-info span[class*="mins"] a {
-    color: #888 !important;
-    font-size: 0.9rem;
+.recipe-info span[class*="diet"] {
+    border-radius: 4px;
+    padding: 2px 6px;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Style for undefined text */
-.recipe-info span[class*="undefined"],
-.recipe-info span[class*="undefined"] a {
-    color: #888 !important;
-    font-size: 0.9rem;
+/* Ensure all recipe card content is visible in light mode */
+:root[data-theme="light"] .recipe-card h3 {
+    color: #333;
+}
+
+:root[data-theme="light"] .recipe-meta,
+:root[data-theme="light"] .recipe-info,
+:root[data-theme="light"] .recipe-info span {
+    color: #666 !important;
+}
+
+/* Ensure all recipe card content is visible in dark mode */
+:root[data-theme="dark"] .recipe-card {
+    background-color: #2d2d2d;
+}
+
+:root[data-theme="dark"] .recipe-card-content {
+    background-color: #2d2d2d;
+}
+
+:root[data-theme="dark"] .recipe-card h3 {
+    color: #f0f0f0;
+}
+
+:root[data-theme="dark"] .recipe-meta,
+:root[data-theme="dark"] .recipe-info,
+:root[data-theme="dark"] .recipe-info span {
+    color: #cccccc !important;
 }
 
 /* Edit Recipe button styling */

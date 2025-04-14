@@ -47,18 +47,21 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        favoritesGrid.innerHTML = favorites.map(recipe => `
+        favoritesGrid.innerHTML = favorites.map(recipe => {
+            return `
             <a href="/recipe/${recipe.id}" class="recipe-card">
-                <img src="${recipe.image || '/images/default-recipe.jpg'}" alt="${recipe.title}" class="recipe-image">
+                <img src="${recipe.image || '/images/default-recipe.jpg'}" alt="${recipe.title}">
                 <div class="recipe-content">
                     <h3 class="recipe-title">${recipe.title}</h3>
                     <div class="recipe-info">
-                        <p>By ${recipe.author}</p>
-                        <p>Added to favorites: ${new Date(recipe.favoritedAt).toLocaleDateString()}</p>
+                        <p><i class="fas fa-user"></i> ${recipe.author}</p>
+                        <p><i class="far fa-calendar"></i> ${new Date(recipe.favoritedAt).toLocaleDateString()}</p>
+                        ${recipe.prepTime ? `<p><i class="far fa-clock"></i> ${recipe.prepTime} mins</p>` : ''}
+                        ${recipe.dietaryType ? `<p><i class="fas fa-utensils"></i> ${recipe.dietaryType}</p>` : ''}
                     </div>
                 </div>
             </a>
-        `).join('');
+        `}).join('');
     };
 
     // Call loadFavorites when page loads

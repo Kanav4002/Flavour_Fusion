@@ -158,3 +158,37 @@ input, textarea, select {
 [data-theme="dark"] .testimonial-author p {
     color: #d0d0d0;
 }
+
+/* Dashboard My Favorites section */
+[data-theme="dark"] .my-favorites {
+    background-color: #2a2a2a;
+}
+
+[data-theme="dark"] .my-favorites h2 {
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .my-favorites .recipe-card {
+    background-color: #333333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .my-favorites .recipe-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .my-favorites .recipe-title {
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .my-favorites .recipe-description {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .my-favorites .recipe-info p {
+    color: #cccccc !important;
+}
+
+[data-theme="dark"] .my-favorites .recipe-info i {
+    color: #64b5f6;
+}
