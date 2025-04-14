@@ -2,7 +2,7 @@
 
 FlavorFusion is a comprehensive web application designed to enhance your cooking experience. It combines recipe discovery, meal planning, shopping list generation, and a vibrant cooking blog in one seamless platform.
 
-![FlavorFusion Logo](public/img/logo.png)
+![FlavorFusion Logo](public/images/logo.jpeg)
 
 ## 🌟 Recent Updates
 
