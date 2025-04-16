@@ -6,28 +6,32 @@
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Montserrat', sans-serif;
     
-    /* Existing variables */
-    --bg-primary: #f8f5f2; /* Changed from white to a soft cream/beige */
-    --bg-secondary: #f0ebe6; /* Slightly darker version for secondary backgrounds */
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --accent-color: #4a90e2;
-    --border-color: #dddddd;
-    --card-bg: #ffffff;
-    --nav-bg: #333333;
-    --nav-text: #ffffff;
+    /* New color scheme */
+    --bg-primary: #F9F7F7; /* Light background */
+    --bg-secondary: #DBE2EF; /* Light blue-gray */
+    --text-primary: #112D4E; /* Dark blue */
+    --text-secondary: #3F72AF; /* Medium blue */
+    --accent-color: #3F72AF; /* Medium blue */
+    --accent-color-dark: #112D4E; /* Dark blue */
+    --border-color: #DBE2EF; /* Light blue-gray */
+    --card-bg: #FFFFFF;
+    --nav-bg: #112D4E; /* Dark blue */
+    --nav-text: #FFFFFF;
+    --shadow-color: rgba(17, 45, 78, 0.1); /* Based on dark blue */
 }
 
 [data-theme="dark"] {
-    --bg-primary: #1a1a1a;
-    --bg-secondary: #2d2d2d;
-    --text-primary: #f0f0f0; /* Improved from #ffffff to #f0f0f0 for better visibility */
-    --text-secondary: #e0e0e0; /* Improved from #cccccc to #e0e0e0 for better visibility */
-    --accent-color: #64b5f6;
-    --border-color: #404040;
-    --card-bg: #2d2d2d;
-    --nav-bg: #000000;
-    --nav-text: #ffffff;
+    --bg-primary: #112D4E; /* Dark blue */
+    --bg-secondary: #1a2a3a; /* Darker blue */
+    --text-primary: #F9F7F7; /* Light color */
+    --text-secondary: #DBE2EF; /* Light blue-gray */
+    --accent-color: #3F72AF; /* Medium blue */
+    --accent-color-dark: #2b5080; /* Darker medium blue */
+    --border-color: #3F72AF; /* Medium blue */
+    --card-bg: #1a2a3a; /* Darker blue */
+    --nav-bg: #0a1929; /* Very dark blue */
+    --nav-text: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Add base font styles */
@@ -72,35 +76,36 @@ input, textarea, select {
 }
 
 .theme-toggle:hover {
-    color: var(--accent-color);
+    color: var(--bg-secondary);
 }
 
+/* Old theme definitions - keeping them but updating with new color scheme */
 :root[data-theme="light"] {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f4f4f4;
-    --text-primary: #333333;
-    --text-secondary: #666666;
-    --accent-color: #ff6b6b;
-    --accent-color-dark: #ff5252;
-    --border-color: #dddddd;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-    --nav-bg: #333;
-    --nav-text: #fff;
-    --card-bg: #ffffff;
+    --bg-primary: #F9F7F7; /* Light background */
+    --bg-secondary: #DBE2EF; /* Light blue-gray */
+    --text-primary: #112D4E; /* Dark blue */
+    --text-secondary: #3F72AF; /* Medium blue */
+    --accent-color: #3F72AF; /* Medium blue */
+    --accent-color-dark: #112D4E; /* Dark blue */
+    --border-color: #DBE2EF; /* Light blue-gray */
+    --shadow-color: rgba(17, 45, 78, 0.1); /* Based on dark blue */
+    --nav-bg: #112D4E; /* Dark blue */
+    --nav-text: #FFFFFF;
+    --card-bg: #FFFFFF;
 }
 
 :root[data-theme="dark"] {
-    --bg-primary: #1a1a1a;
-    --bg-secondary: #2d2d2d;
-    --text-primary: #f0f0f0; /* Improved contrast */
-    --text-secondary: #e0e0e0; /* Improved contrast */
-    --accent-color: #ff6b6b;
-    --accent-color-dark: #ff5252;
-    --border-color: #404040;
+    --bg-primary: #112D4E; /* Dark blue */
+    --bg-secondary: #1a2a3a; /* Darker blue */
+    --text-primary: #F9F7F7; /* Light color */
+    --text-secondary: #DBE2EF; /* Light blue-gray */
+    --accent-color: #3F72AF; /* Medium blue */
+    --accent-color-dark: #2b5080; /* Darker medium blue */
+    --border-color: #3F72AF; /* Medium blue */
     --shadow-color: rgba(0, 0, 0, 0.3);
-    --nav-bg: #000;
-    --nav-text: #fff;
-    --card-bg: #2d2d2d;
+    --nav-bg: #0a1929; /* Very dark blue */
+    --nav-text: #FFFFFF;
+    --card-bg: #1a2a3a; /* Darker blue */
 }
 
 /* Additional dark mode specific styles */
