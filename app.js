@@ -128,7 +128,10 @@ const requireLogin = (req, res, next) => {
 
 // Dashboard route
 app.get("/dashboard", requireLogin, (req, res) => {
-    res.render("dashboard");
+    // Pass the username to the dashboard template
+    res.render("dashboard", { 
+        username: req.session.user.username 
+    });
 });
 
 // Add recipe route
