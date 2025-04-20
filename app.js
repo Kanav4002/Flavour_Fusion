@@ -6,6 +6,9 @@ const fs = require('fs');
 const { blockingRead, nonBlockingRead } = require('./utils/fileOperations');
 const multer = require("multer");
 const app = express();
+app.use(morgan('dev')); // Logs request in 'dev' format to the console
+
+
 
 // Set up EJS as the view engine
 app.set('view engine', 'ejs');
