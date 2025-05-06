@@ -3,15 +3,12 @@ const session = require('express-session');
 const path = require('path');
 const morgan = require('morgan');
 const fs = require('fs');
-const { blockingRead, nonBlockingRead } = require('./utils/fileOperations');
 const multer = require("multer");
 const app = express();
-app.use(morgan('dev')); // Logs request in 'dev' format to the console
+app.use(morgan('dev'));
 
 
-
-// Set up EJS as the view engine
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');  
 app.set('views', path.join(__dirname, 'views'));
 
 const storage = multer.diskStorage({
@@ -30,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 2. Body parser middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(session({
     secret: 'flavorfusion-secret',

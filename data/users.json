@@ -39,6 +39,11 @@
       "username": "john",
       "email": "john@gmail.com",
       "password": "12345678"
+    },
+    {
+      "username": "kanav",
+      "email": "kumarkanav5753@gmail.com",
+      "password": "12345678"
     }
   ]
 }

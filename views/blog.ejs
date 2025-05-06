@@ -6,421 +6,22 @@
     <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/footer.css">
 </head>
-    <style>
-        .blog-container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-        
-        .blog-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .blog-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-header p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-        }
-        
-        .blog-search {
-            display: flex;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        
-        .blog-search input {
-            flex: 1;
-            padding: 0.8rem 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 4px 0 0 4px;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .blog-search button {
-            padding: 0.8rem 1.2rem;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-        }
-        
-        .blog-grid {
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 2rem;
-        }
-        
-        .blog-posts {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .blog-card {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background-color: var(--card-bg);
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-        
-        .blog-card-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .blog-card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .blog-card:hover .blog-card-img img {
-            transform: scale(1.05);
-        }
-        
-        .blog-card-content {
-            padding: 1.5rem;
-        }
-        
-        .blog-card-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.8rem;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        
-        .blog-card-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-tag {
-            padding: 0.3rem 0.8rem;
-            background-color: var(--tag-bg);
-            color: var(--tag-text);
-            border-radius: 20px;
-            font-size: 0.75rem;
-        }
-        
-        .blog-card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
-            line-height: 1.4;
-        }
-        
-        .blog-card p {
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        
-        .blog-card-actions {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .blog-card-btn {
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            transition: background-color 0.3s;
-        }
-        
-        .blog-card-btn.secondary {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 1px solid var(--primary-color);
-            margin-left: 0.5rem;
-        }
-        
-        .blog-card-btn:hover {
-            background-color: var(--primary-hover);
-        }
-        
-        .blog-card-btn.secondary:hover {
-            background-color: rgba(var(--primary-color-rgb), 0.1);
-        }
-        
-        .blog-card-stats {
-            display: flex;
-            gap: 1rem;
-            color: var(--text-secondary);
-        }
-        
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-        
-        .sidebar-section {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        .sidebar-section h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .category-list, .recent-posts-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-        
-        .category-item, .recent-post-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border-color-light);
-        }
-        
-        .category-item:last-child, .recent-post-item:last-child {
-            border-bottom: none;
-        }
-        
-        .category-count {
-            background-color: var(--tag-bg);
-            color: var(--tag-text);
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-        }
-        
-        .recent-post-date {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-        
-        .newsletter-form input {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .newsletter-form button {
-            width: 100%;
-            padding: 0.8rem;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            transition: background-color 0.3s;
-        }
-        
-        .newsletter-form button:hover {
-            background-color: var(--primary-hover);
-        }
-        
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 3rem;
-            gap: 0.5rem;
-        }
-        
-        .pagination-btn {
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            background-color: var(--card-bg);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .pagination-btn.active {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-        
-        .pagination-btn:hover:not(.active) {
-            background-color: var(--hover-bg);
-        }
-        
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            overflow-y: auto;
-        }
-        
-        .modal-content {
-            background-color: var(--card-bg);
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 8px;
-            max-width: 800px;
-            width: 90%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .modal-close {
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-secondary);
-        }
-        
-        .modal-form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .modal-form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        .modal-form-group input,
-        .modal-form-group select,
-        .modal-form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--input-bg);
-            color: var(--text-primary);
-        }
-        
-        .modal-form-group textarea {
-            min-height: 200px;
-            resize: vertical;
-        }
-        
-        .modal-footer {
-            display: flex;
-            justify-content: flex-end;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .modal-btn {
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s;
-        }
-        
-        .modal-btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-        }
-        
-        .modal-btn-secondary {
-            background-color: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-        }
-        
-        .modal-btn-danger {
-            background-color: var(--danger-color);
-            color: white;
-            border: none;
-        }
-        
-        .modal-btn-primary:hover {
-            background-color: var(--primary-hover);
-        }
-        
-        .modal-btn-secondary:hover {
-            background-color: var(--hover-bg);
-        }
-        
-        .modal-btn-danger:hover {
-            background-color: var(--danger-hover);
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 992px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                margin-top: 2rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .blog-posts {
-                grid-template-columns: 1fr;
-            }
-            
-            .blog-header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
 <body>
     <%- include('partials/header') %>
 
     <main class="blog-container">
-        <div class="blog-hero">
+        <div class="blog-page-header">
             <h1>FlavorFusion Blog</h1>
             <p>Discover culinary insights, cooking tips, and food stories from our community</p>
             
-            <div class="blog-search">
-                <form id="blogSearchForm">
-                    <div class="search-container">
-                        <input type="text" id="blogSearchInput" placeholder="Search for blog posts...">
-                        <button type="submit" class="search-btn">
+            <div class="blog-page-actions">
+                 <form id="blogSearchForm" class="blog-search">
+                    <input type="search" id="blogSearchInput" placeholder="Search for blog posts..." aria-label="Search blog posts">
+                    <button type="submit" class="search-btn" aria-label="Search">
                             <i class="fas fa-search"></i>
                         </button>
-                    </div>
                 </form>
-            </div>
-            
-            <div class="new-post-btn-container">
-                <button id="newPostBtn" class="new-post-btn" onclick="openNewPostModal()">
+                <button id="newPostBtn" class="new-post-btn">
                     <i class="fas fa-plus"></i> Create New Blog Post
                 </button>
             </div>
@@ -429,251 +30,70 @@
         <div class="blog-content">
             <div class="blog-main">
                 <div class="blog-posts-container">
-                    <div class="blog-posts">
-                        <!-- Blog Post 1 -->
-                        <article class="blog-card">
-                            <div class="blog-card-img">
-                                <img src="https://source.unsplash.com/random/600x400?cooking" alt="Blog post image">
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span>By Chef Maria</span>
-                                    <span>June 15, 2023</span>
-                                </div>
-                                <div class="blog-card-tags">
-                                    <span class="blog-tag">Cooking Tips</span>
-                                    <span class="blog-tag">Techniques</span>
-                                </div>
-                                <h3>10 Essential Knife Skills Every Home Cook Should Master</h3>
-                                <p>Learn the fundamental cutting techniques that will transform your cooking experience and help you prepare meals like a professional chef...</p>
-                                <div class="blog-card-actions">
-                                    <div>
-                                        <button class="blog-card-btn">Read More</button>
-                                        <button class="blog-card-btn secondary" onclick="openEditModal(1)"><i class="fas fa-edit"></i></button>
-                                    </div>
-                                    <div class="blog-card-stats">
-                                        <span><i class="far fa-heart"></i> 42</span>
-                                        <span><i class="far fa-comment"></i> 15</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Blog Post 2 -->
-                        <article class="blog-card">
-                            <div class="blog-card-img">
-                                <img src="https://source.unsplash.com/random/600x400?spices" alt="Blog post image">
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span>By Spice Expert Alex</span>
-                                    <span>June 10, 2023</span>
-                                </div>
-                                <div class="blog-card-tags">
-                                    <span class="blog-tag">Ingredients</span>
-                                    <span class="blog-tag">Spices</span>
-                                </div>
-                                <h3>The Art of Spice Blending: Create Your Own Signature Mixes</h3>
-                                <p>Discover how to combine spices to create unique flavor profiles that will elevate your dishes and impress your guests with bold, balanced tastes...</p>
-                                <div class="blog-card-actions">
-                                    <div>
-                                        <button class="blog-card-btn">Read More</button>
-                                        <button class="blog-card-btn secondary" onclick="openEditModal(2)"><i class="fas fa-edit"></i></button>
-                                    </div>
-                                    <div class="blog-card-stats">
-                                        <span><i class="far fa-heart"></i> 38</span>
-                                        <span><i class="far fa-comment"></i> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Blog Post 3 -->
-                        <article class="blog-card">
-                            <div class="blog-card-img">
-                                <img src="https://source.unsplash.com/random/600x400?baking" alt="Blog post image">
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span>By Pastry Chef Emma</span>
-                                    <span>June 5, 2023</span>
-                                </div>
-                                <div class="blog-card-tags">
-                                    <span class="blog-tag">Baking</span>
-                                    <span class="blog-tag">Desserts</span>
-                                </div>
-                                <h3>The Science Behind Perfect Pastries: Temperature, Timing, and Technique</h3>
-                                <p>Understand the precise chemistry that makes pastries rise, crisp, and develop complex flavors, with practical tips for achieving bakery-quality results at home...</p>
-                                <div class="blog-card-actions">
-                                    <div>
-                                        <button class="blog-card-btn">Read More</button>
-                                        <button class="blog-card-btn secondary" onclick="openEditModal(3)"><i class="fas fa-edit"></i></button>
-                                    </div>
-                                    <div class="blog-card-stats">
-                                        <span><i class="far fa-heart"></i> 56</span>
-                                        <span><i class="far fa-comment"></i> 23</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Blog Post 4 -->
-                        <article class="blog-card">
-                            <div class="blog-card-img">
-                                <img src="https://source.unsplash.com/random/600x400?vegetables" alt="Blog post image">
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span>By Nutritionist Sarah</span>
-                                    <span>May 28, 2023</span>
-                                </div>
-                                <div class="blog-card-tags">
-                                    <span class="blog-tag">Nutrition</span>
-                                    <span class="blog-tag">Vegetables</span>
-                                </div>
-                                <h3>Seasonal Eating: Maximizing Flavor and Nutrition Year-Round</h3>
-                                <p>Learn how to shop, cook, and eat with the seasons to enjoy produce at its peak flavor while supporting sustainable food systems and improving your health...</p>
-                                <div class="blog-card-actions">
-                                    <div>
-                                        <button class="blog-card-btn">Read More</button>
-                                        <button class="blog-card-btn secondary" onclick="openEditModal(4)"><i class="fas fa-edit"></i></button>
-                                    </div>
-                                    <div class="blog-card-stats">
-                                        <span><i class="far fa-heart"></i> 45</span>
-                                        <span><i class="far fa-comment"></i> 18</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Blog Post 5 -->
-                        <article class="blog-card">
-                            <div class="blog-card-img">
-                                <img src="https://source.unsplash.com/random/600x400?kitchen" alt="Blog post image">
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-card-meta">
-                                    <span>By Kitchen Designer Jordan</span>
-                                    <span>May 20, 2023</span>
-                                </div>
-                                <div class="blog-card-tags">
-                                    <span class="blog-tag">Kitchen</span>
-                                    <span class="blog-tag">Equipment</span>
-                                </div>
-                                <h3>Essential Kitchen Tools: What You Actually Need and What You Don't</h3>
-                                <p>Cut through the marketing hype and discover which kitchen tools are truly worth the investment, and which trendy gadgets will just collect dust...</p>
-                                <div class="blog-card-actions">
-                                    <div>
-                                        <button class="blog-card-btn">Read More</button>
-                                        <button class="blog-card-btn secondary" onclick="openEditModal(5)"><i class="fas fa-edit"></i></button>
-                                    </div>
-                                    <div class="blog-card-stats">
-                                        <span><i class="far fa-heart"></i> 39</span>
-                                        <span><i class="far fa-comment"></i> 14</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+                    <!-- Search results header will be injected here -->
+                    <div class="blog-posts" id="blogPosts">
+                        <!-- Blog posts will be loaded here by JavaScript -->
+                        <p>Loading posts...</p> 
                     </div>
+                     <!-- "No results" message will be injected here -->
                 </div>
-                
-                <div class="pagination">
-                    <button class="pagination-btn active">1</button>
-                    <button class="pagination-btn">2</button>
-                    <button class="pagination-btn">3</button>
-                    <button class="pagination-btn">4</button>
-                    <button class="pagination-btn">5</button>
-                    <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
-                </div>
+                 <!-- Pagination can be added here if needed later -->
             </div>
             
-            <div class="sidebar">
-                <div class="sidebar-section">
+            <aside class="blog-sidebar">
+                <section class="sidebar-section categories-section">
                     <h3>Categories</h3>
-                    <div class="category-list">
-                        <div class="category-item">
-                            <a href="#">Cooking Tips</a>
-                            <span class="category-count">24</span>
-                        </div>
-                        <div class="category-item">
-                            <a href="#">Recipes</a>
-                            <span class="category-count">18</span>
-                        </div>
-                        <div class="category-item">
-                            <a href="#">Ingredients</a>
-                            <span class="category-count">15</span>
-                        </div>
-                        <div class="category-item">
-                            <a href="#">Kitchen Equipment</a>
-                            <span class="category-count">12</span>
-                        </div>
-                        <div class="category-item">
-                            <a href="#">Food Culture</a>
-                            <span class="category-count">9</span>
-                        </div>
-                        <div class="category-item">
-                            <a href="#">Nutrition</a>
-                            <span class="category-count">8</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="sidebar-section">
+                    <ul class="category-list" id="categoriesList">
+                        <!-- Categories will be loaded here -->
+                        <li>Loading categories...</li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-section recent-posts-section">
                     <h3>Recent Posts</h3>
-                    <div class="recent-posts-list">
-                        <div class="recent-post-item">
-                            <a href="#">10 Essential Knife Skills Every Home Cook Should Master</a>
-                            <span class="recent-post-date">June 15, 2023</span>
-                        </div>
-                        <div class="recent-post-item">
-                            <a href="#">The Art of Spice Blending: Create Your Own Signature Mixes</a>
-                            <span class="recent-post-date">June 10, 2023</span>
-                        </div>
-                        <div class="recent-post-item">
-                            <a href="#">The Science Behind Perfect Pastries</a>
-                            <span class="recent-post-date">June 5, 2023</span>
-                        </div>
-                        <div class="recent-post-item">
-                            <a href="#">Seasonal Eating: Maximizing Flavor and Nutrition</a>
-                            <span class="recent-post-date">May 28, 2023</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="sidebar-section">
+                    <ul class="recent-posts-list" id="recentPostsList">
+                        <!-- Recent posts will be loaded here -->
+                        <li>Loading recent posts...</li>
+                    </ul>
+                </section>
+
+                <section class="sidebar-section newsletter-section">
                     <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter to get the latest recipes and cooking tips.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
+                    <p>Subscribe for the latest recipes and tips.</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" id="newsletterEmail" placeholder="Your email address" required aria-label="Email address">
+                        <button type="submit" class="modal-btn modal-btn-primary">Subscribe</button>
                     </form>
-                </div>
-            </div>
+                </section>
+            </aside>
         </div>
     </main>
 
-    <!-- New Post Modal -->
-    <div id="newPostModal" class="modal">
+    <!-- Modals -->
+
+    <!-- New/Edit Post Modal -->
+    <div id="postFormModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Create New Blog Post</h2>
-                <span class="modal-close" onclick="closeModal('newPostModal')">&times;</span>
+                <h2 id="postFormModalTitle">Create New Blog Post</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
             </div>
-            <form id="newPostForm">
+            <form id="postForm">
+                <input type="hidden" id="editPostId"> 
                 <div class="modal-form-group">
                     <label for="postTitle">Title</label>
-                    <input type="text" id="postTitle" placeholder="Enter post title">
+                    <input type="text" id="postTitle" required>
                 </div>
                 <div class="modal-form-group">
                     <label for="postCategory">Category</label>
-                    <select id="postCategory">
-                        <option value="">Select a category</option>
-                        <option value="cooking-tips">Cooking Tips</option>
-                        <option value="recipes">Recipes</option>
-                        <option value="ingredients">Ingredients</option>
-                        <option value="kitchen-equipment">Kitchen Equipment</option>
-                        <option value="food-culture">Food Culture</option>
-                        <option value="nutrition">Nutrition</option>
+                    <select id="postCategory" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Cooking Tips">Cooking Tips</option>
+                        <option value="Recipes">Recipes</option>
+                        <option value="Ingredients">Ingredients</option>
+                        <option value="Kitchen Equipment">Kitchen Equipment</option>
+                        <option value="Food Culture">Food Culture</option>
+                        <option value="Nutrition">Nutrition</option>
                     </select>
                 </div>
                 <div class="modal-form-group">
@@ -683,60 +103,19 @@
                 <div class="modal-form-group">
                     <label for="postImage">Featured Image</label>
                     <input type="file" id="postImage" accept="image/*">
+                    <div id="imagePreviewContainer" style="margin-top: 10px; display: none;">
+                        <p>Current Image:</p>
+                        <img id="imagePreview" src="#" alt="Image Preview" style="max-width: 100%; height: auto; max-height: 150px;">
+                    </div>
                 </div>
                 <div class="modal-form-group">
                     <label for="postContent">Content</label>
-                    <textarea id="postContent" placeholder="Write your blog post content here..."></textarea>
+                    <textarea id="postContent" rows="10" required></textarea>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="modal-btn modal-btn-secondary" onclick="closeModal('newPostModal')">Cancel</button>
-                    <button type="submit" class="modal-btn modal-btn-primary">Publish</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Edit Post Modal -->
-    <div id="editPostModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Edit Blog Post</h2>
-                <span class="modal-close" onclick="closeModal('editPostModal')">&times;</span>
-            </div>
-            <form id="editPostForm">
-                <input type="hidden" id="editPostId">
-                <div class="modal-form-group">
-                    <label for="editPostTitle">Title</label>
-                    <input type="text" id="editPostTitle">
-                </div>
-                <div class="modal-form-group">
-                    <label for="editPostCategory">Category</label>
-                    <select id="editPostCategory">
-                        <option value="">Select a category</option>
-                        <option value="cooking-tips">Cooking Tips</option>
-                        <option value="recipes">Recipes</option>
-                        <option value="ingredients">Ingredients</option>
-                        <option value="kitchen-equipment">Kitchen Equipment</option>
-                        <option value="food-culture">Food Culture</option>
-                        <option value="nutrition">Nutrition</option>
-                    </select>
-                </div>
-                <div class="modal-form-group">
-                    <label for="editPostTags">Tags (comma separated)</label>
-                    <input type="text" id="editPostTags">
-                </div>
-                <div class="modal-form-group">
-                    <label for="editPostImage">Featured Image</label>
-                    <input type="file" id="editPostImage" accept="image/*">
-                </div>
-                <div class="modal-form-group">
-                    <label for="editPostContent">Content</label>
-                    <textarea id="editPostContent"></textarea>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="modal-btn modal-btn-danger" onclick="confirmDelete()">Delete</button>
-                    <button type="button" class="modal-btn modal-btn-secondary" onclick="closeModal('editPostModal')">Cancel</button>
-                    <button type="submit" class="modal-btn modal-btn-primary">Save Changes</button>
+                    <button type="button" class="modal-btn modal-btn-secondary cancel-btn" data-action="cancel">Cancel</button>
+                    <button type="submit" id="postSubmitBtn" class="modal-btn modal-btn-primary">Publish</button>
+                    <button type="button" id="deletePostBtn" class="modal-btn modal-btn-danger" style="display: none;">Delete Post</button> 
                 </div>
             </form>
         </div>
@@ -746,30 +125,38 @@
     <div id="viewPostModal" class="modal">
         <div class="modal-content view-post-content">
             <div class="modal-header">
-                <h2 id="viewPostTitle"></h2>
-                <span class="modal-close" onclick="closeModal('viewPostModal')">&times;</span>
+                <h2 id="viewPostTitle">Blog Post Title</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
             </div>
-            <div class="post-meta">
-                <span id="viewPostAuthor"></span>
-                <span id="viewPostDate"></span>
-                <div id="viewPostTags" class="blog-card-tags"></div>
+            <div class="post-meta-details">
+                <span id="viewPostAuthor">By Author</span> | 
+                <span id="viewPostDate">Date</span> | 
+                Category: <span id="viewPostCategory">Category</span>
             </div>
-            <div class="post-image">
-                <img id="viewPostImage" src="" alt="">
+            <div id="viewPostTags" class="post-tags-container">
+                <!-- Tags will be loaded here -->
             </div>
-            <div class="post-content">
-                <p id="viewPostContent"></p>
+            <div class="post-image-container">
+                <img id="viewPostImage" src="" alt="Blog post image" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+            </div>
+            <div id="viewPostContent" class="post-full-content">
+                <p>Full blog post content goes here...</p>
             </div>
             
-            <div class="post-comments">
+            <hr style="margin: 2rem 0;">
+
+            <div class="post-comments-section">
                 <h3>Comments</h3>
-                <div id="commentsContainer"></div>
+                <div id="commentsContainer">
+                    <!-- Comments will be loaded here -->
+                    <p>No comments yet.</p>
+                </div>
                 
-                <div class="comment-form">
+                <div class="comment-form-container">
                     <h4>Leave a Comment</h4>
                     <form id="commentForm">
                         <div class="modal-form-group">
-                            <textarea id="commentContent" placeholder="Write your comment here..." rows="4"></textarea>
+                            <textarea id="commentContent" placeholder="Write your comment here..." rows="4" required></textarea>
                         </div>
                         <button type="submit" class="modal-btn modal-btn-primary">Post Comment</button>
                     </form>
@@ -777,6 +164,22 @@
             </div>
         </div>
     </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteConfirmModal" class="modal">
+         <div class="modal-content small-modal">
+             <div class="modal-header">
+                <h2>Confirm Deletion</h2>
+                 <button class="modal-close" aria-label="Close modal">&times;</button>
+             </div>
+            <p>Are you sure you want to delete this blog post? This action cannot be undone.</p>
+            <div class="modal-footer">
+                <button type="button" class="modal-btn modal-btn-secondary cancel-btn" data-action="cancel">Cancel</button>
+                <button type="button" id="deleteConfirmBtn" class="modal-btn modal-btn-danger">Delete</button>
+            </div>
+         </div>
+    </div>
+
 
     <%- include('partials/footer') %>
 

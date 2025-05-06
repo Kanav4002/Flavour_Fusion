@@ -360,6 +360,11 @@
           "userId": "john@gmail.com",
           "rating": 5,
           "createdAt": "2025-04-15T05:21:34.068Z"
+        },
+        {
+          "userId": "kumarkanav5753@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-05-05T10:12:00.739Z"
         }
       ],
       "comments": []
@@ -551,6 +556,37 @@
       "author": "muskan2158",
       "authorId": "muskan@gmail.com",
       "createdAt": "2025-03-10T04:03:29.749Z",
+      "ratings": [],
+      "comments": []
+    },
+    {
+      "id": "1746439902565",
+      "title": "Carot Noodles",
+      "description": "Use a vegetable peeler or spiralizer to turn carrots into gluten-free fettucine-like noodles, then top with a luscious sauce of white wine, cream, peas, ham, and butter.",
+      "ingredients": [
+        "1 pound carrots",
+        "3 tablespoons unsalted butter",
+        "½ cup minced onion",
+        "¼ pound sliced ham, cut into thin strips",
+        "2 cloves garlic, minced",
+        "½ cup dry white wine",
+        "1 cup heavy cream",
+        "1 cup frozen peas, thawed",
+        "1 tablespoon Dijon mustard",
+        "salt and pepper to taste"
+      ],
+      "instructions": [
+        "Use a vegetable peeler to shave carrots into fettucine-like strands.",
+        "Heat butter in a large skillet over medium-high heat; when foam subsides, add onion and ham. Cook and stir for 3 minutes.",
+        "Add carrot strands, garlic, and wine to the skillet with the onion mixture. Reduce heat to low and cover. Cook, stirring occasionally, about 10 minutes.",
+        "Add cream and peas to the skillet. Bring the mixture to a boil. Reduce heat, cover, and simmer 5 minutes more. Stir in mustard, salt, and pepper."
+      ],
+      "prepTime": "35",
+      "dietaryType": "veg",
+      "image": "/uploads/1746439902558-538196993-Screenshot 2025-05-05 at 3.38.06â¯PM.png",
+      "author": "kanav",
+      "authorId": "kumarkanav5753@gmail.com",
+      "createdAt": "2025-05-05T10:11:42.565Z",
       "ratings": [],
       "comments": []
     }
