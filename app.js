@@ -4,9 +4,21 @@ const path = require('path');
 const morgan = require('morgan');
 const fs = require('fs');
 const multer = require("multer");
+const mongoose = require('mongoose');
 const app = express();
 app.use(morgan('dev'));
 
+// Connect to MongoDB
+const dbconnection = async () => {
+    try {
+      await mongoose.connect("mongodb+srv://kanav:prime@cluster0.erybndy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+      console.log("Connected to MongoDB Atlas");
+    } catch(err) {
+      console.log(err);
+    }
+};
+
+dbconnection()
 
 app.set('view engine', 'ejs');  
 app.set('views', path.join(__dirname, 'views'));
