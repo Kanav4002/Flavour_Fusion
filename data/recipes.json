@@ -365,9 +365,25 @@
           "userId": "kumarkanav5753@gmail.com",
           "rating": 5,
           "createdAt": "2025-05-05T10:12:00.739Z"
+        },
+        {
+          "userId": "john@gmail.com",
+          "rating": 5,
+          "createdAt": "2025-05-13T10:54:07.342Z"
+        },
+        {
+          "userId": "john@gmail.com",
+          "rating": 4,
+          "createdAt": "2025-05-13T10:54:18.126Z"
         }
       ],
-      "comments": []
+      "comments": [
+        {
+          "author": "john",
+          "text": "Oh wow this is so tasty. Should try :)",
+          "createdAt": "2025-05-13T10:57:24.998Z"
+        }
+      ]
     },
     {
       "id": "1741544645056",

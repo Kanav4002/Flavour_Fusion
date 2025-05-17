@@ -4,7 +4,6 @@ const path = require('path');
 const morgan = require('morgan');
 const fs = require('fs');
 const multer = require("multer");
-const mongoose = require('mongoose');
 const app = express();
 app.use(morgan('dev'));
 
@@ -18,7 +17,7 @@ const dbconnection = async () => {
     }
 };
 
-dbconnection()
+dbconnection();
 
 app.set('view engine', 'ejs');  
 app.set('views', path.join(__dirname, 'views'));
@@ -39,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 2. Body parser middleware
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+
 app.use(express.static('public'));
 app.use(session({
     secret: 'flavorfusion-secret',
